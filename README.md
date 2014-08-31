@@ -5,7 +5,7 @@ AITranslucentLabel
 一个半透明的Label 背景透明 文字不透明
 
 
-## How to use
+## Usage
 
 ```objc
  AITranslucentLabel *label = [[AITranslucentLabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 280.0f, 80.0f)];
