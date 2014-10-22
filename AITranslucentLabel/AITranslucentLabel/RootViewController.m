@@ -32,7 +32,6 @@
         AITranslucentLabel *label = [[AITranslucentLabel alloc] initWithFrame:CGRectMake(0,20.0f+i*50.0f, self.view.bounds.size.width, 44.0f)];
         label.text = @"Xavi";
         label.font = [UIFont systemFontOfSize:24];
-//        label.textColor = [UIColor blueColor];
 //        label.alphaValue = 0.2;
 //        label.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:label];
