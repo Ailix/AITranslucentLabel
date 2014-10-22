@@ -30,7 +30,6 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"01.jpg"]];
     for (int i=0; i<9; i++) {
         AITranslucentLabel *label = [[AITranslucentLabel alloc] initWithFrame:CGRectMake(0,20.0f+i*50.0f, self.view.bounds.size.width, 44.0f)];
-//        label.backgroundColor = [UIColor blackColor];
         label.text = @"Xavi";
         label.font = [UIFont systemFontOfSize:24];
 //        label.textColor = [UIColor blueColor];
