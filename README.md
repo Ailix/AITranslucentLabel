@@ -9,8 +9,8 @@ AITranslucentLabel
 
 ```objc
 AITranslucentLabel *label = [AITranslucentLabel labelWithBuilder:^(AITranslucentLabelBuilder *builder) {
-builder.frame = CGRectMake(0, 100, self.view.frame.size.width, 44);
-builder.text  = @"Xavi";
+    builder.frame = CGRectMake(0, 100, self.view.frame.size.width, 44);
+    builder.text  = @"Xavi";
 }];
 [self.view addSubview:label];
 ```
