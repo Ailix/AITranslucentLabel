@@ -1,113 +1,140 @@
-//
-//  AITranslucentLabel.m
-//  AITranslucentLabel
-//
-//  Created by Ailix on 14-8-29.
-//  Copyright (c) 2014年 NC. All rights reserved.
-//
+
 
 #import "AITranslucentLabel.h"
 
-static NSInteger const titleLabelTag        = 100;
-static NSInteger const translucentViewTag   = 200;
-static CGFloat   const titleLabelOffsetX    = 20.0f;
+@interface AITranslucentLabel ()
+
+/** 标签 */
+@property (nonatomic,strong) UILabel *label;
+
+/** 透明视图 */
+@property (nonatomic,strong) UIView *translucentView;
+
+@end
 
 
 @implementation AITranslucentLabel
 
-- (id)initWithFrame:(CGRect)frame
+
+- (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [self uiConfig];
+        [self configUI];
     }
     return self;
 }
 
-- (void)dealloc
+
++ (instancetype)labelWithBuilder:(AITranslucentLabelBuilderBlock)builderBlock
 {
-    self.font = nil;
-    self.text = nil;
-    [super dealloc];
+    NSParameterAssert(builderBlock);
+    AITranslucentLabelBuilder *builder = [[AITranslucentLabelBuilder alloc] init];
+    builderBlock(builder);
+    return [builder build];
 }
 
 - (void)setText:(NSString *)text
 {
     if (_text != text) {
-        [_text release];
         _text = [text copy];
-        UILabel *titleLabel = (UILabel *)[self viewWithTag:titleLabelTag];
-        titleLabel.text = _text;
-    }
-}
-
-- (void)setFont:(UIFont *)font
-{
-    if (_font != font) {
-        [_font release];
-        _font = [font retain];
-        UILabel *titleLabel = (UILabel *)[self viewWithTag:titleLabelTag];
-        titleLabel.font = _font;
-//        NSLog(@"%@",titleLabel.font);
+        _label.text = text;
     }
 }
 
 - (void)setTextColor:(UIColor *)textColor
 {
     if (_textColor != textColor) {
-        [_textColor release];
-        _textColor = [textColor retain];
-        UILabel *titleLabel = (UILabel *)[self viewWithTag:titleLabelTag];
-        titleLabel.textColor = _textColor;
-        NSLog(@"%@",titleLabel.textColor);
+        _textColor = textColor;
+        _label.textColor = textColor;
     }
 }
 
 - (void)setTextAlignment:(NSTextAlignment)textAlignment
 {
-    _textAlignment = textAlignment;
-    UILabel *titleLabel = (UILabel *)[self viewWithTag:titleLabelTag];
-    titleLabel.textAlignment = _textAlignment;
+    if (_textAlignment != textAlignment) {
+        _textAlignment = textAlignment;
+        _label.textAlignment = textAlignment;
+    }
+}
+
+- (void)setFont:(UIFont *)font
+{
+    if (_font != font) {
+        _font = font;
+        _label.font = font;
+    }
 }
 
 - (void)setAlphaValue:(CGFloat)alphaValue
 {
-    _alphaValue = alphaValue;
-     UIView *translucentView = (UIView *)[self viewWithTag:translucentViewTag];
-    translucentView.alpha = _alphaValue;
+    if (_alphaValue != alphaValue) {
+        _alphaValue = alphaValue;
+        _translucentView.alpha = alphaValue;
+    }
 }
 
-- (void)uiConfig
+- (UIView *)translucentView
 {
-    CGRect rect = CGRectMake(0.0f, 0.0f, self.frame.size.width, self.frame.size.height);
-    UIView *translucentView = [[UIView alloc] initWithFrame:rect];
-    translucentView.tag = translucentViewTag;
-//    translucentView.backgroundColor = self.backgroundColor;
-    translucentView.backgroundColor = [UIColor blackColor];
-    translucentView.alpha = 0.5;
-    [self addSubview:translucentView];
-    [translucentView release];
+    if (_translucentView == nil) {
+        _translucentView = [[UIView alloc] init];
+        _translucentView.backgroundColor = [UIColor blackColor];
+        _translucentView.alpha = 0.5;
+    }
+    return _translucentView;
+}
+
+- (UILabel *)label
+{
+    if (_label == nil) {
+        _label = [[UILabel alloc] init];
+        _label.textColor = [UIColor whiteColor];
+    }
+    return _label;
+}
+
+- (void)awakeFromNib
+{
+    [self configUI];
+}
+
+
+- (void)configUI
+{
     
-    CGRect rect2 = CGRectMake(titleLabelOffsetX, 0.0f, self.frame.size.width - 2*titleLabelOffsetX, self.frame.size.height);
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:rect2];
-//    NSLog(@"%@",NSStringFromCGRect(titleLabel.frame));
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.tag = titleLabelTag;
-    titleLabel.textColor = [UIColor whiteColor];
-//    NSLog(@"%@",titleLabel.textColor);
-    [self addSubview:titleLabel];
-    [titleLabel release];
-//    NSLog(@"%@",titleLabel.font);
+    [self addSubview:self.translucentView];
+    [self addSubview:self.label];
+    
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)layoutSubviews
 {
-    // Drawing code
+    [super layoutSubviews];
+    self.translucentView.frame = self.bounds;
+    self.label.frame = self.bounds;
 }
-*/
+@end
+
+
+@implementation AITranslucentLabelBuilder
+
+
+- (AITranslucentLabel *)build
+{
+    // 可以在这里对 property 做检查
+    NSAssert(self.text, @"必须填写标题");
+    //    AITranslucentLabel *label = [[AITranslucentLabel alloc] initWithFrame:_frame];
+    AITranslucentLabel *label = [[AITranslucentLabel alloc] init];
+    label.frame               = _frame;
+    label.text                = _text;
+    label.font                = _font;
+    label.textColor           = _textColor;
+    label.textAlignment       = _textAlignment;
+    label.alphaValue          = _alphaValue;
+    return label;
+}
+
+
 
 @end

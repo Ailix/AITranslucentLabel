@@ -7,17 +7,17 @@
 		<key>AITranslucentLabel.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>58A7FEC219B0BEE5005F67F7</key>
+		<key>58CED9171A8E320500449CB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58A7FEDD19B0BEE5005F67F7</key>
+		<key>58CED9301A8E320600449CB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
