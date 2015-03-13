@@ -16,6 +16,7 @@
 		58CED9381A8E320600449CB3 /* AITranslucentLabelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CED9371A8E320600449CB3 /* AITranslucentLabelTests.m */; };
 		58CED9431A8E32BF00449CB3 /* AITranslucentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CED9421A8E32BF00449CB3 /* AITranslucentLabel.m */; };
 		58CED9451A8E334C00449CB3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CED9441A8E334C00449CB3 /* Default-568h@2x.png */; };
+		58F5F48F1AB1D66E005EB65E /* AITranslucentLabelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F48E1AB1D66E005EB65E /* AITranslucentLabelBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		58CED9411A8E32BF00449CB3 /* AITranslucentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITranslucentLabel.h; sourceTree = "<group>"; };
 		58CED9421A8E32BF00449CB3 /* AITranslucentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITranslucentLabel.m; sourceTree = "<group>"; };
 		58CED9441A8E334C00449CB3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		58F5F48D1AB1D66E005EB65E /* AITranslucentLabelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITranslucentLabelBuilder.h; sourceTree = "<group>"; };
+		58F5F48E1AB1D66E005EB65E /* AITranslucentLabelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITranslucentLabelBuilder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				58CED9231A8E320500449CB3 /* ViewController.m */,
 				58CED9411A8E32BF00449CB3 /* AITranslucentLabel.h */,
 				58CED9421A8E32BF00449CB3 /* AITranslucentLabel.m */,
+				58F5F48D1AB1D66E005EB65E /* AITranslucentLabelBuilder.h */,
+				58F5F48E1AB1D66E005EB65E /* AITranslucentLabelBuilder.m */,
 				58CED9251A8E320500449CB3 /* Main.storyboard */,
 				58CED9281A8E320500449CB3 /* Images.xcassets */,
 				58CED92A1A8E320500449CB3 /* LaunchScreen.xib */,
@@ -228,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F5F48F1AB1D66E005EB65E /* AITranslucentLabelBuilder.m in Sources */,
 				58CED9431A8E32BF00449CB3 /* AITranslucentLabel.m in Sources */,
 				58CED9241A8E320500449CB3 /* ViewController.m in Sources */,
 				58CED9211A8E320500449CB3 /* AppDelegate.m in Sources */,
@@ -422,6 +428,7 @@
 				58CED93D1A8E320600449CB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58CED93E1A8E320600449CB3 /* Build configuration list for PBXNativeTarget "AITranslucentLabelTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +437,7 @@
 				58CED9401A8E320600449CB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
