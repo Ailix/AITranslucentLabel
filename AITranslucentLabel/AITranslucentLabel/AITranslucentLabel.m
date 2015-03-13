@@ -2,7 +2,6 @@
 
 #import "AITranslucentLabel.h"
 
-#import "AITranslucentLabelBuilder.h"
 
 @interface AITranslucentLabel ()
 
@@ -28,6 +27,19 @@
     return self;
 }
 
+- (void)awakeFromNib
+{
+    [self configUI];
+}
+
+
+- (void)configUI
+{
+    [self addSubview:self.translucentView];
+    [self addSubview:self.label];
+    self.alphaValue = .5;
+    
+}
 
 + (instancetype)labelWithBuilder:(AITranslucentLabelBuilderBlock)builderBlock
 {
@@ -82,7 +94,7 @@
     if (_translucentView == nil) {
         _translucentView                 = [[UIView alloc] init];
         _translucentView.backgroundColor = [UIColor blackColor];
-        _translucentView.alpha           = 0.5;
+//        _translucentView.alpha           = 0.5;
     }
     return _translucentView;
 }
@@ -96,19 +108,8 @@
     return _label;
 }
 
-- (void)awakeFromNib
-{
-    [self configUI];
-}
 
 
-- (void)configUI
-{
-    
-    [self addSubview:self.translucentView];
-    [self addSubview:self.label];
-    
-}
 
 - (void)layoutSubviews
 {
