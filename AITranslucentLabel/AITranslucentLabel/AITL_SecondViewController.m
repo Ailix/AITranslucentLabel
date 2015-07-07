@@ -24,24 +24,24 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"01"]];
-    
-    
-    
-    
-    CGRect bounds = [UIScreen mainScreen].bounds;
-    
-    CGFloat screenWidth = CGRectGetWidth(bounds);
+
+
+
+
+    CGRect bounds             = [UIScreen mainScreen].bounds;
+
+    CGFloat screenWidth       = CGRectGetWidth(bounds);
 //    CGFloat screenHeight = CGRectGetHeight(bounds);
     
     
     for (int i = 0; i<7; i++) {
         
-        UILabel *label = [UILabel new];
-        label.frame = CGRectMake(0, 54*i + 44, screenWidth, 44);
-        
+        UILabel *label        = [UILabel new];
+        label.frame           = CGRectMake(0, 54*i + 44, screenWidth, 44);
+
         label.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.5];
-        label.textColor = [UIColor whiteColor];
-        label.text = @"Xavi";
+        label.textColor       = [UIColor whiteColor];
+        label.text            = @"Xavi";
         [self.view addSubview:label];
         
         

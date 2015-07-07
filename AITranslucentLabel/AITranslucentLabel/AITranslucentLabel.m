@@ -51,42 +51,40 @@
 
 - (void)setText:(NSString *)text
 {
-    if (_text != text) {
-        _text       = [text copy];
-        _label.text = text;
-    }
+    
+    _text           = text;
+    self.label.text = text;
+    
+  
 }
 
 - (void)setTextColor:(UIColor *)textColor
 {
-    if (_textColor != textColor) {
-        _textColor       = textColor;
-        _label.textColor = textColor;
-    }
+
+    _textColor           = textColor;
+    self.label.textColor = textColor;
+    
 }
 
 - (void)setTextAlignment:(NSTextAlignment)textAlignment
 {
-    if (_textAlignment != textAlignment) {
-        _textAlignment       = textAlignment;
-        _label.textAlignment = textAlignment;
-    }
+ 
+    _textAlignment           = textAlignment;
+    self.label.textAlignment = textAlignment;
 }
 
 - (void)setFont:(UIFont *)font
 {
-    if (_font != font) {
-        _font       = font;
-        _label.font = font;
-    }
+  
+    _font           = font;
+    self.label.font = font;
 }
 
 - (void)setAlphaValue:(CGFloat)alphaValue
 {
-    if (_alphaValue != alphaValue) {
-        _alphaValue            = alphaValue;
-        _translucentView.alpha = alphaValue;
-    }
+   
+    _alphaValue                = alphaValue;
+    self.translucentView.alpha = alphaValue;
 }
 
 - (UIView *)translucentView

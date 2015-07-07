@@ -23,9 +23,10 @@
     
     
     AITranslucentLabel *label = [AITranslucentLabel labelWithBuilder:^(AITranslucentLabelBuilder *builder) {
-        builder.frame = CGRectMake(0, 100, self.view.frame.size.width, 44);
+        builder.frame         = CGRectMake(0, 100, self.view.frame.size.width, 44);
         builder.textAlignment = NSTextAlignmentCenter;
-        builder.text  = @"Xavi";
+        builder.text          = @"Xavi";
+        builder.textColor     = [UIColor whiteColor];
 //        builder.alphaValue = .7;
     }];
     NSLog(@"%f",label.alphaValue);
@@ -33,12 +34,12 @@
     
 //    AITranslucentLabel *label2 = [[AITranslucentLabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(label.frame) + label.frame.size.height, label.frame.size.width, 44)];
     
-    AITranslucentLabel *label2  = [[AITranslucentLabel alloc] init];
-    label2.frame = CGRectMake(0, CGRectGetMaxY(label.frame) + label.frame.size.height, label.frame.size.width, 44);
-    label2.text = @"Xavi2";
-    label2.alphaValue = .8;
-    label2.font = [UIFont systemFontOfSize:20.];
-    label2.textAlignment = NSTextAlignmentCenter;
+    AITranslucentLabel *label2 = [[AITranslucentLabel alloc] init];
+    label2.frame               = CGRectMake(0, CGRectGetMaxY(label.frame) + label.frame.size.height, label.frame.size.width, 44);
+    label2.text                = @"Xavi2";
+    label2.alphaValue          = .8;
+    label2.font                = [UIFont systemFontOfSize:20.];
+    label2.textAlignment       = NSTextAlignmentCenter;
     [self.view addSubview:label2];
     NSLog(@"%f",label2.alphaValue);
     
