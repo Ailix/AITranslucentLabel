@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JL1-EC-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JL1-EC-Uak">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -23,13 +23,30 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="AITranslucentLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IoY-qd-kiY">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="WPs-Ss-nVH" kind="push" id="0u2-Kv-gZ9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aqP-kk-eXe" style="IBUITableViewCellStyleDefault" id="xiX-jr-kQi">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xiX-jr-kQi" id="66o-9r-zuS">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SystemTranslucentLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aqP-kk-eXe">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="nlt-gQ-Ysg" kind="push" id="9j2-n4-V91"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -44,12 +61,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZ1-Ok-nc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="296"/>
+            <point key="canvasLocation" x="199" y="296"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="caw-Zp-wqy">
             <objects>
-                <viewController id="WPs-Ss-nVH" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="WPs-Ss-nVH" customClass="AITL_ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="djS-c2-b0J"/>
                         <viewControllerLayoutGuide type="bottom" id="Ald-vp-mC3"/>
@@ -63,7 +80,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zkw-OS-jrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="296"/>
+            <point key="canvasLocation" x="669" y="-213"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="MeB-6U-rvy">
+            <objects>
+                <viewController id="nlt-gQ-Ysg" customClass="AITL_SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yu5-2K-t4T"/>
+                        <viewControllerLayoutGuide type="bottom" id="bir-uA-J35"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gWV-CT-6v8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sY0-Aq-pUi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NlS-8K-LpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="669" y="489"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q8G-8i-YWq">

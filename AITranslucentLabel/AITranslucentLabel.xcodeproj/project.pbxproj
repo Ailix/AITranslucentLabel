@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		58CED91E1A8E320500449CB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CED91D1A8E320500449CB3 /* main.m */; };
 		58CED9211A8E320500449CB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CED9201A8E320500449CB3 /* AppDelegate.m */; };
-		58CED9241A8E320500449CB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CED9231A8E320500449CB3 /* ViewController.m */; };
+		58CED9241A8E320500449CB3 /* AITL_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CED9231A8E320500449CB3 /* AITL_ViewController.m */; };
 		58CED9271A8E320500449CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58CED9251A8E320500449CB3 /* Main.storyboard */; };
 		58CED9291A8E320500449CB3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58CED9281A8E320500449CB3 /* Images.xcassets */; };
 		58CED92C1A8E320500449CB3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58CED92A1A8E320500449CB3 /* LaunchScreen.xib */; };
@@ -17,6 +17,7 @@
 		58CED9431A8E32BF00449CB3 /* AITranslucentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 58CED9421A8E32BF00449CB3 /* AITranslucentLabel.m */; };
 		58CED9451A8E334C00449CB3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 58CED9441A8E334C00449CB3 /* Default-568h@2x.png */; };
 		58F5F48F1AB1D66E005EB65E /* AITranslucentLabelBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 58F5F48E1AB1D66E005EB65E /* AITranslucentLabelBuilder.m */; };
+		E93F94171B4B764700F55A7D /* AITL_SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93F94161B4B764700F55A7D /* AITL_SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +36,8 @@
 		58CED91D1A8E320500449CB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58CED91F1A8E320500449CB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58CED9201A8E320500449CB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		58CED9221A8E320500449CB3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		58CED9231A8E320500449CB3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		58CED9221A8E320500449CB3 /* AITL_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AITL_ViewController.h; sourceTree = "<group>"; };
+		58CED9231A8E320500449CB3 /* AITL_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AITL_ViewController.m; sourceTree = "<group>"; };
 		58CED9261A8E320500449CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58CED9281A8E320500449CB3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		58CED92B1A8E320500449CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +49,8 @@
 		58CED9441A8E334C00449CB3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		58F5F48D1AB1D66E005EB65E /* AITranslucentLabelBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITranslucentLabelBuilder.h; sourceTree = "<group>"; };
 		58F5F48E1AB1D66E005EB65E /* AITranslucentLabelBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITranslucentLabelBuilder.m; sourceTree = "<group>"; };
+		E93F94151B4B764700F55A7D /* AITL_SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITL_SecondViewController.h; sourceTree = "<group>"; };
+		E93F94161B4B764700F55A7D /* AITL_SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITL_SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +95,10 @@
 			children = (
 				58CED91F1A8E320500449CB3 /* AppDelegate.h */,
 				58CED9201A8E320500449CB3 /* AppDelegate.m */,
-				58CED9221A8E320500449CB3 /* ViewController.h */,
-				58CED9231A8E320500449CB3 /* ViewController.m */,
+				58CED9221A8E320500449CB3 /* AITL_ViewController.h */,
+				58CED9231A8E320500449CB3 /* AITL_ViewController.m */,
+				E93F94151B4B764700F55A7D /* AITL_SecondViewController.h */,
+				E93F94161B4B764700F55A7D /* AITL_SecondViewController.m */,
 				58CED9411A8E32BF00449CB3 /* AITranslucentLabel.h */,
 				58CED9421A8E32BF00449CB3 /* AITranslucentLabel.m */,
 				58F5F48D1AB1D66E005EB65E /* AITranslucentLabelBuilder.h */,
@@ -176,6 +181,7 @@
 		58CED9101A8E320500449CB3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = AITL_;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Ailix;
 				TargetAttributes = {
@@ -235,8 +241,9 @@
 			files = (
 				58F5F48F1AB1D66E005EB65E /* AITranslucentLabelBuilder.m in Sources */,
 				58CED9431A8E32BF00449CB3 /* AITranslucentLabel.m in Sources */,
-				58CED9241A8E320500449CB3 /* ViewController.m in Sources */,
+				58CED9241A8E320500449CB3 /* AITL_ViewController.m in Sources */,
 				58CED9211A8E320500449CB3 /* AppDelegate.m in Sources */,
+				E93F94171B4B764700F55A7D /* AITL_SecondViewController.m in Sources */,
 				58CED91E1A8E320500449CB3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

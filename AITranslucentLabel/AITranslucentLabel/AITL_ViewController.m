@@ -6,15 +6,15 @@
 //  Copyright (c) 2015年 Ailix. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "AITL_ViewController.h"
 #import "AITranslucentLabel.h"
 
 
-@interface ViewController ()
+@interface AITL_ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation AITL_ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
